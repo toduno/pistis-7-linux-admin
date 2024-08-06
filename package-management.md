@@ -92,12 +92,14 @@ dnf search keyword  # For newer Red Hat systems
 ### Step 7: List Installed Packages
 You can list all installed packages on your system using the following command:
 
-```markdown
 For Debian/Ubuntu (apt):
+```markdown
 dpkg --list
 dpkg list
+```
 
 For Red Hat-based systems (yum or dnf):
+```markdown
 rpm -qa  # For older Red Hat systems
 ```
 OR
