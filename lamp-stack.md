@@ -73,10 +73,11 @@ CREATE TABLE lampstack_database.todo_list (
     PRIMARY KEY(item_id)
 );
 ```
-- Then inserted a few rows of content in the test table – INSERT INTO lampstack_database. todo_list (content) VALUES (“Networking”);
-Confirmed the data was successfully saved to my table – SELECT * FROM lampstack_database.todo_list;
-Exited the MySQL console once the confirmation was successful – exit
-Next step was to create the PHP script that would connect to MySQL and query for my content. The PHP file was created in my custom web root directory using Vi editor – sudo vi /var/www/lampstackproject/todo_list.php
+- Then inserted a few rows of content in the test table – `INSERT INTO lampstack_database. todo_list (content) VALUES (“Networking”);`
+- Confirmed the data was successfully saved to my table – `SELECT * FROM lampstack_database.todo_list;`
+- Exited the MySQL console once the confirmation was successful – `exit`
+- Next step was to create the PHP script that would connect to MySQL and query for my content. The PHP file was created in my custom web root directory using Vi editor – `sudo vi /var/www/lampstackproject/todo_list.php`
+```php
 <?php
 $user = "Todun";
 $password = "password";
@@ -95,5 +96,7 @@ try {
     print "Error!: " . $e->getMessage() . "<br/>";
     die();
 }
-Finally, accessed the page in my web browser by visiting my domain name or public IP address configured for my website, followed by /todo_list.php which means my PHP environment is ready to connect and interact with my MySQL server – http://lampstackproject/todo_list.php
+```
+- Finally, accessed the page in my web browser by visiting my domain name or public IP address configured for my website, followed by /todo_list.php which means my PHP environment is ready to connect and interact with my MySQL server – `http://lampstackproject/todo_list.php`
 
+![Testing DB Connection from PHP](images/23.png)
